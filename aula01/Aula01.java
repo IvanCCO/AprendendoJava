@@ -11,7 +11,6 @@ public class Aula01 {
         c1.modelo = "Bic 2080";
         c1.tampada = true;
         c1.status();
-        c1.rabiscar();
-        c1.status();
+        c1.tampar();
     }
 }
