@@ -1,4 +1,7 @@
+import java.text.Format;
 import java.util.Scanner;
+
+//https://azure-samples.github.io/raspberry-pi-web-simulator/#getstarted
 
 class Caneta {
 
@@ -10,28 +13,17 @@ class Caneta {
 
   void status() {
 
-    System.out.println("Uma caneta " + this.cor);
-    System.out.println("Esta tampada?: " + this.tampada);
   }
 
   void rabiscar() {
 
-    if (this.tampada == true) {
-
-      System.out.println("Você pode Rabiscar");
-
-    } else {
-
-      System.out.println("Você não pode Rabiscar");
-    }
+   
 
   }
 
   void tampar() {
 
     String array_cor[] = { "Verde", "Preto", "Roxo", "Azul-Claro", "Marrom" };
-
-    System.out.println(this.modelo.length());
 
     for (int i = 0; i < array_cor.length; i++) {
 
@@ -52,20 +44,26 @@ class Caneta {
 
             String likedColor = ColorObj.nextLine();
 
-            System.out.println("likedColor é " + likedColor);
+
+            //System.out.println(likedColor == array_resposta[j]);
+
+            //System.out.println("likedColor é " + likedColor + " E o tipo é: " + likedColor.getClass());
+            
+  
 
             for (int k = 0; k < array_resposta.length; k++) {
 
-              if(likedColor == array_resposta[k]){
+             // System.out.println(array_resposta[k].getClass());
+
+              if (likedColor == array_resposta[k]) {
 
                 System.out.println("Entrou no Certo");
-              }else if(likedColor.isEmpty()){
+              } else if (likedColor.isEmpty()) {
+                volta++;
+              } else {
 
-                System.out.println("Digite valores validos");
-                System.out.println(j); 
-              }else{
+                volta++;
 
-                System.out.println("SCORORR");
               }
             }
 
